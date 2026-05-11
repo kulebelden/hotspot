@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Street-WiFi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+  
+    <main id="portal-card" class="portal-card">
+      <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">🌙</button>
+      <div class="brand-panel">
+        <div class="brand-icon">📶</div>
+        <h2>KIMz HOTSPOT</h2>
+      </div>
+
+      
+      <div class="voucher-panel">
+        <label for="voucherCode">Enter your voucher code</label>
+        <div class="voucher-input-group">
+          <input id="voucherCode" type="text" placeholder="Enter your voucher code" />
+          <button id="loginBtn" class="primary-btn">Login</button>
+        </div>
+        <button id="findVoucherBtn" class="secondary-btn">Already bought? Find My Voucher</button>
+        <p id="loginMessage" class="message"></p>
+      </div>
+
+      <section class="packages-section">
+        <p class="section-label">Select a package and pay with Mobile Money</p>
+        <div id="packagesList" class="packages-list"></div>
+      </section>
+
+      <section class="payment-panel">
+        <div class="accept-panel">
+          <p>We accept:</p>
+          <div class="payment-logos">
+            <span class="logo airtel">airtel money</span>
+            <span class="logo momo">MoMo from MTN</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="support-panel">
+        <p>Need help? Contact support:</p>
+        <p class="support-number">0703712334 / +256703712334</p>
+        <div class="device-info">
+          <p>IP: 192.168.</p>
+          <p>MAC: </p>
+        </div>
+        <p class="powered-by">Powered By <span>Belden</span></p>
+        <p class="terms">Terms and Conditions Apply</p>
+      </section>
+    </main>
+  </div>
+
+  <template id="packageCardTemplate">
+    <div class="package-card">
+      <div>
+        <h3 class="package-name"></h3>
+        <p class="package-duration"></p>
+      </div>
+      <div class="package-meta">
+        <span class="package-price"></span>
+        <button class="buy-btn">BUY</button>
+      </div>
+    </div>
+  </template>
+
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle"></h3>
+        <button id="modalCloseBtn" class="modal-close-btn">❎</button>
+      </div>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

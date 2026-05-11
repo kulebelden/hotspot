@@ -1,0 +1,60 @@
+I am building a WiFi hotspot billing system. I already have a frontend login page built using HTML, CSS, and JavaScript.
+
+I want you to help me build a simple Python backend using Flask that I can understand and modify as a beginner.
+
+Requirements:
+
+1. Use Flask as the backend framework.
+2. Connect to a MySQL database.
+3. Create clear and simple code with comments explaining each step.
+
+Features I need:
+
+* User authentication system (based on phone number or voucher code)
+
+* Store users in a MySQL database
+
+* Tables needed:
+
+  * users (id, phone_number, mac_address)
+  * packages (id, name, price, duration)
+  * payments (id, user_id, amount, date)
+  * sessions (id, user_id, login_time, logout_time)
+
+* API endpoints:
+
+  * POST /login → user submits phone or voucher
+  * POST /pay → simulate payment and activate package
+  * GET /status → check if user has active session
+  * GET /admin/stats → return total earnings (daily, weekly, monthly)
+
+* When a user logs in:
+
+  * Check if they have an active package
+  * If yes, allow access
+  * If no, redirect to payment
+
+* Simulate mobile money payment (no real API yet)
+
+* Structure the project clearly:
+
+  * app.py (main Flask app)
+  * database connection file
+  * models or simple SQL queries
+  * routes folder if possible
+
+* Include instructions on how to:
+
+  * Install dependencies
+  * Run the server
+  * Connect to MySQL
+
+* Keep everything beginner-friendly (no advanced patterns like microservices)
+
+Optional (if possible):
+
+* Show how to log user sessions (login time and logout time)
+* Simple way to calculate total earnings using SQL queries
+
+Important:
+Write clean, simple, well-commented code that I can learn from and expand later. Avoid overly complex structures.
